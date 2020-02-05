@@ -15,7 +15,7 @@ except ModuleNotFoundError:
 def rep_func(matchobj):
     int_1 = int(matchobj.group(1))
     int_2 = int(matchobj.group(2))
-    char = chr(int_2 - int_1)
+    char = chr(abs(int_2 - int_1))
 
     if char == '"':
         char = '\\"'
