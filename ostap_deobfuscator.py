@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# Ostap deobfuscator january-2020
+# Ostap deobfuscator feb-2020
 # Use raw JSE file (not beautified) as parameter
 
 import re
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     with open(in_path, "r") as fd:
         buff = fd.read()
 
-    raw_patt = r"\(function\(\w+(?:\,\w+)?\){.*?]=(\d+);\s+.*?]=(\d+);.*?}\)\(.*?\)"
+    raw_patt = r"\(function\(\w+(?:\,\w+)?\){.*?]=(\d+);\s?.*?]=(\d+);.*?}\)\(.*?\)"
     compiled = re.compile(raw_patt)
 
     if not compiled.search(buff):
